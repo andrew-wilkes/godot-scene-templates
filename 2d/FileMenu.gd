@@ -1,6 +1,6 @@
 extends Control
 
-enum { NO_ACTION, NEW, OPEN, SAVE, SAVE_AS, IMPORT, QUIT, ABOUT, SUB_MENU }
+enum { NO_ACTION, NEW, OPEN, SAVE, SAVE_AS, QUIT, ABOUT, SUB_MENU }
 
 onready var file_menu = find_node("FileMenu").get_popup()
 onready var file_dialog = find_node("FileDialog")
