@@ -10,7 +10,7 @@ func _on_QuitButton_pressed():
 	try_to_quit()
 
 
-func _unhandled_input(event):
+func _unhandled_input(event): # Or use: func _unhandled_key_input(event) maybe?
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_ESCAPE:
 			try_to_quit()
