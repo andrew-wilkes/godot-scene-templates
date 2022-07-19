@@ -11,22 +11,29 @@ theme = SubResource( 1 )
 script = ExtResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 474.0
-margin_top = 278.0
-margin_right = 549.0
-margin_bottom = 322.0
+margin_left = 465.0
+margin_top = 263.0
+margin_right = 559.0
+margin_bottom = 337.0
 custom_constants/separation = 10
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 75.0
+margin_right = 94.0
 margin_bottom = 14.0
 text = "MENU"
 align = 1
 
 [node name="FileMenuButton" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
-margin_right = 75.0
+margin_right = 94.0
 margin_bottom = 44.0
 text = "File Menu"
 
+[node name="ConfirmQuitButton" type="Button" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 94.0
+margin_bottom = 74.0
+text = "Confirm Quit"
+
 [connection signal="pressed" from="VBoxContainer/FileMenuButton" to="." method="_on_FileMenuButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ConfirmQuitButton" to="." method="_on_ConfirmQuitButton_pressed"]
