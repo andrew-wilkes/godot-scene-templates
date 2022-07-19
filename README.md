@@ -2,6 +2,10 @@
 
 A growing collection of useful scene templates for the Godot Game Engine.
 
+For each category (2D/3D), a Home scene is provided to give a menu to navigate to the various example scenes.
+
+You can download or clone this repository to your PC to try them out.
+
 ## [2D Scenes](2d)
 - ConfirmQuit - Popup asks for confirmation when quitting without saving
 - FileMenu - File Menu with example backend code and File Dialog
