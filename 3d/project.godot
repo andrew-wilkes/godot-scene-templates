@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="3D Scenes"
-run/main_scene="res://Scene Switcher.tscn"
+run/main_scene="res://Home.tscn"
 config/icon="res://icon.png"
 
 [gui]

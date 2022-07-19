@@ -40,6 +40,7 @@ func _on_FileMenu_id_pressed(id):
 	menu_action = id
 	match id:
 		NEW:
+			settings.current_file = ""
 			$Label.set_text("New file")
 		OPEN:
 			do_action()
@@ -50,7 +51,7 @@ func _on_FileMenu_id_pressed(id):
 			settings.current_file = ""
 			do_action()
 		QUIT:
-			var _e = get_tree().change_scene("res://Scene Switcher.tscn")
+			var _e = get_tree().change_scene("res://Home.tscn")
 
 
 func do_action():
@@ -77,7 +78,7 @@ func _on_FileDialog_file_selected(path):
 		if menu_action == SAVE:
 			save_file()
 		else:
-			$Label.set_text("Load file " + settings.last_dir + "/" + settings.current_file)
+			$Label.set_text("Load file: " + settings.last_dir + "/" + settings.current_file)
 
 
 func file_ok(path):
@@ -90,12 +91,12 @@ func file_ok(path):
 
 
 func save_file():
-	$Label.set_text("Save file " + settings.last_dir + "/" + settings.current_file)
+	$Label.set_text("Save file: " + settings.last_dir + "/" + settings.current_file)
 
 
 func _on_SubMenu_id_pressed(id):
-	$Label.set_text("Sub menu ID:%d pressed" % id)
+	$Label.set_text("Sub menu ID: %d pressed" % id)
 
 
 func _on_AboutMenu_id_pressed(id):
-	$Label.set_text("About menu ID:%d pressed" % id)
+	$Label.set_text("About menu ID: %d pressed" % id)

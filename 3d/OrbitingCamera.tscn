@@ -36,9 +36,9 @@ margin_left = 104.0
 margin_top = -24.0
 margin_right = 311.0
 margin_bottom = 24.0
-text = "UP/DOWN/LEFT/RIGHT - ROTATE
+text = "ROTATE: UP/DOWN/LEFT/RIGHT
 
-WASDZX - MOVE"
+MOVE: WASDZX"
 
 [node name="Title" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
@@ -54,4 +54,3 @@ margin_left = -127.0
 margin_top = 26.0
 margin_right = -28.0
 margin_bottom = 46.0
-text = "Back to Menu"
