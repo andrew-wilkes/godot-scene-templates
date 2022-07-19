@@ -73,21 +73,11 @@ func do_action():
 
 
 func _on_FileDialog_file_selected(path):
-	if file_ok(path):
-		settings.current_file = path.get_file()
-		if menu_action == SAVE:
-			save_file()
-		else:
-			$Label.set_text("Load file: " + settings.last_dir + "/" + settings.current_file)
-
-
-func file_ok(path):
-	var ok = true
-	if path.rstrip("/") == path.get_base_dir():
-		$Label.set_text("No filename was specified")
-		ok = false
-	settings.last_dir = path.get_base_dir()
-	return ok
+	settings.current_file = path.get_file()
+	if menu_action == SAVE:
+		save_file()
+	else:
+		$Label.set_text("Load file: " + settings.last_dir + "/" + settings.current_file)
 
 
 func save_file():
