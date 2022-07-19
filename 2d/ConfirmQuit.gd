@@ -3,6 +3,7 @@ extends Control
 var saved = false
 
 func _ready():
+	# The following may also be done via Project settings (application/project/auto_accept_quit)
 	get_tree().set_auto_accept_quit(false)
 
 
@@ -34,6 +35,6 @@ func _on_ConfirmationDialog_confirmed():
 
 
 func quit():
-	# Usually we write: get_tree().quit()
+	# Usually we write: get_tree().quit() instead of the following code
 	get_tree().set_auto_accept_quit(true)
 	var _e = get_tree().change_scene("res://Home.tscn")
