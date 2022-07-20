@@ -69,7 +69,6 @@ func do_action():
 				file_dialog.popup_centered()
 			else:
 				save_file()
-				
 
 
 func _on_FileDialog_file_selected(path):
