@@ -45,6 +45,8 @@ func _on_GraphEdit_node_unselected(node):
 
 
 func _on_GraphEdit_delete_nodes_request(_nodes):
+	# This list of _nodes is not relevant in out case
+	# It is indicating what nodes that have cancel boxes checked
 	if selected_nodes.size() > 0:
 		# Want to keep our original model of the node.
 		# Normally we would implement a generator.
