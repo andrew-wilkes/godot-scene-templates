@@ -15,4 +15,6 @@ You can download or clone this repository to your PC to try them out.
 - OrbitingCamera - Node Tree for easy orbiting of a Camera around a point
 
 ---
+Encourage me to do more: [Buy me a coffee](https://buymeacoffee.com/gdscriptdude)
+
 See also: [GDScript Examples](https://github.com/andrew-wilkes/gdscript-examples)
