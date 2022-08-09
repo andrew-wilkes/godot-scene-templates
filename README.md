@@ -20,7 +20,7 @@ This is also a demo project that may be imported into Godot.
 
 - OrbitingCamera - Node Tree for easy orbiting of a Camera around a point using the mouse or keyboard
 
-![3D Camera Scene](2d/media/3d-camera.png)
+![3D Camera Scene](media/3d-camera.png)
 
 ---
 Encourage me to do more: [Buy me a coffee](https://buymeacoffee.com/gdscriptdude)
