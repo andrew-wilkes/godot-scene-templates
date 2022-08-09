@@ -47,3 +47,10 @@ margin_left = -127.0
 margin_top = 26.0
 margin_right = -28.0
 margin_bottom = 46.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.811972, -0.233937, -0.534767, 0.195372, 0.972252, -0.128672, 0.550029, 0, 0.835146, -6.26023, 0, 0 )
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+transform = Transform( -0.512741, 0.213102, 0.831676, 0.195372, 0.972252, -0.128672, -0.836018, 0.0965105, -0.540147, -6.26023, 0, 0 )
+light_color = Color( 0.694118, 0.694118, 0.694118, 1 )
