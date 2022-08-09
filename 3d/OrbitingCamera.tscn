@@ -1,56 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://OrbitingCamera.gd" type="Script" id=1]
-[ext_resource path="res://HomeButton.tscn" type="PackedScene" id=2]
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.0705882, 0.517647, 0.619608, 1 )
-
-[node name="OrbitingCameraScene" type="Spatial"]
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.950943, 0.11205, -0.28836, 0, 0.932103, 0.362194, 0.309366, -0.344426, 0.886377, -5.45232, 0, 0 )
-
-[node name="DirectionalLight2" type="DirectionalLight" parent="."]
-transform = Transform( 0.805256, 0.48209, 0.345183, -0.443096, 0.876122, -0.189939, -0.39399, 1.17418e-08, 0.919115, 2.5418, 0, 0 )
-
-[node name="CSGBox" type="CSGBox" parent="."]
-material = SubResource( 1 )
-
-[node name="OrbitingCamera" type="Position3D" parent="."]
+[node name="OrbitingCamera" type="Position3D"]
 script = ExtResource( 1 )
 
-[node name="XAxis" type="Position3D" parent="OrbitingCamera"]
+[node name="XAxis" type="Position3D" parent="."]
 
-[node name="YAxis" type="Position3D" parent="OrbitingCamera/XAxis"]
+[node name="YAxis" type="Position3D" parent="XAxis"]
 
-[node name="Camera" type="Camera" parent="OrbitingCamera/XAxis/YAxis"]
+[node name="Camera" type="Camera" parent="XAxis/YAxis"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.83841 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="DirectionalLight" type="DirectionalLight" parent="XAxis/YAxis/Camera"]
+transform = Transform( 0.950943, 0.11205, -0.288361, 0, 0.932103, 0.362194, 0.309366, -0.344426, 0.886377, -5.45232, 0, -4.83841 )
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 104.0
-margin_top = -24.0
-margin_right = 311.0
-margin_bottom = 24.0
-text = "ROTATE: UP/DOWN/LEFT/RIGHT
-
-MOVE: WASDZX"
-
-[node name="Title" type="Label" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -52.0
-margin_top = 56.0
-margin_right = 52.0
-margin_bottom = 70.0
-text = "Orbiting Camera"
-
-[node name="HomeButton" parent="CanvasLayer" instance=ExtResource( 2 )]
-margin_left = -127.0
-margin_top = 26.0
-margin_right = -28.0
-margin_bottom = 46.0
+[node name="DirectionalLight2" type="DirectionalLight" parent="XAxis/YAxis/Camera"]
+transform = Transform( 0.805256, 0.48209, 0.345183, -0.443096, 0.876122, -0.189939, -0.39399, -1.02554e-07, 0.919115, 2.5418, 0, -4.83841 )
