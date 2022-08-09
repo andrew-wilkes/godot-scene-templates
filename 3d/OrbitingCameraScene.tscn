@@ -18,18 +18,22 @@ material = SubResource( 1 )
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 112.0
-margin_top = -96.0
-margin_right = 319.0
-margin_bottom = 71.0
-text = "ROTATE: UP/DOWN/LEFT/RIGHT
+margin_left = 23.0
+margin_top = -92.0
+margin_right = 230.0
+margin_bottom = 143.0
+text = "ROTATE
+
+UP/DOWN/LEFT/RIGHT
 Mouse + Left button
 
-PAN:
+PAN
+
 WASD
 Shift + Mouse + Left button
 
-ZOOM:
+ZOOM
+
 ZX
 Ctrl + Mouse + Left button"
 

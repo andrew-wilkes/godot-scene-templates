@@ -14,6 +14,11 @@ config/name="3D Scenes"
 run/main_scene="res://Home.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=600
+window/size/height=400
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
