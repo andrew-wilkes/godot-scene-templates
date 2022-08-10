@@ -8,6 +8,7 @@ onready var about_menu = find_node("AboutMenu").get_popup()
 
 var menu_action = NO_ACTION
 
+# This data is normally saved/loaded to/from disk as part of a resourse object
 var settings = { "last_dir": "", "current_file": "" }
 
 func _ready():
