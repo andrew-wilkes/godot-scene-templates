@@ -12,7 +12,7 @@ You can download or clone this repository to your PC to try them out.
 - Graph - Example using the GraphEdit node with Graph nodes. [Tutorial](https://gdscript.com/solutions/godot-graphnode-and-graphedit-tutorial/)
 
 ## [3D Scenes](3d)
-- OrbitingCamera - Node Tree for easy orbiting of a Camera around a point
+- OrbitingCamera - Node Tree for easy orbiting of a Camera around a pivot point
 
 ---
 See also: [GDScript Examples](https://github.com/andrew-wilkes/gdscript-examples)
