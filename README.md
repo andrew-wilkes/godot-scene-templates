@@ -1,4 +1,4 @@
-# Godot Scene Templates
+# Godot Scene Templates for Godot 3.x
 
 A growing collection of useful scene templates for the Godot Game Engine.
 
