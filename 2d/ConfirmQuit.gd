@@ -12,9 +12,8 @@ func _on_QuitButton_pressed():
 
 
 func _unhandled_input(event): # Or use: func _unhandled_key_input(event) maybe?
-	if event is InputEventKey:
-		if event.pressed and event.scancode == KEY_ESCAPE:
-			try_to_quit()
+	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
+		try_to_quit()
 
 
 # Listen for notification of quit request such as after user clicked on x of window

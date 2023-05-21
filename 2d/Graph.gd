@@ -9,6 +9,7 @@ var selected_nodes = {}
 
 func _ready():
 	# Add buttons to the menu box
+	# We save a bit of code here for node relocation
 	graph.get_zoom_hbox().add_child($AddButton.duplicate())
 	$AddButton.queue_free()
 	graph.get_zoom_hbox().add_child($HomeButton.duplicate())
@@ -26,6 +27,7 @@ func _on_AddButton_pressed():
 	graph.add_child(node)
 
 
+# There is a documentation bug here where "slot" should say "port" since ports are indexes of active slots
 func _on_GraphEdit_connection_request(from, from_slot, to, to_slot):
 	graph.connect_node(from, from_slot, to, to_slot)
 
@@ -43,8 +45,13 @@ func _on_GraphEdit_node_unselected(node):
 
 
 func _on_GraphEdit_delete_nodes_request(_nodes):
+	# This list of _nodes is not relevant in our case
+	# It is indicating what nodes have cancel boxes checked
 	if selected_nodes.size() > 0:
-		for node in selected_nodes.keys():
+		# Want to keep our original model of the node.
+		# Normally we would implement a generator.
+		# We don't need to iterate over keys here since it is done by default with Dictionaries
+		for node in selected_nodes: 
 			if selected_nodes[node]:
 				remove_connections_to_node(node)
 				node.queue_free()
@@ -55,8 +62,7 @@ func remove_connections_to_node(node):
 	for con in graph.get_connection_list():
 		if con.to == node.name or con.from == node.name:
 			graph.disconnect_node(con.from, con.from_port, con.to, con.to_port)
-		
-
+	
 
 func _on_HomeButton_pressed():
 	var _e = get_tree().change_scene("res://Home.tscn")
